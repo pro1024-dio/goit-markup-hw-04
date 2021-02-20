@@ -50,6 +50,12 @@ address {
 
 /* Style general container */
 /* container */
+.canvas {
+  max-width: 100%;
+  min-width: var(--width-container);
+  margin: 0 auto;
+}
+
 .container {
   width: var(--width-container);
   padding: 0 15px;
@@ -77,6 +83,10 @@ address {
 }
 
 /* general HEADER and FOOTTER sections: logo, menu, contact*/
+.header > .canvas {
+  border-bottom: 1px solid var(--border-header-color);
+}
+
 .header .container {
   display: flex;
   align-items: center;
@@ -103,7 +113,7 @@ address {
   color: var(--logofooter-second-color);
 }
 
-/* style header and lists for menu and contact-info*/
+/* style header lists for menu and contact-info*/
 .nav-menu {
   display: flex;
   align-items: center;
@@ -148,15 +158,34 @@ address {
   color: var(--basic-textcolor);
 }
 
-/* style main section
-section Hero */
+/* style main section */
 
-.main-box {
-  min-width: var(--width-container);
-  background-color: var(--accent-bgcolor);
+/* section Hero  */
+
+.hero > .canvas {
+  background-image: linear-gradient(
+    to right,
+    var(--accent-bgcolor-40),
+    var(--accent-bgcolor-40)
+  );
 }
 
-.hero.container {
+.hero > .canvas > .background {
+  max-width: var(--width-canvas);
+  min-height: var(--height-canvas);
+  margin: 0 auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      var(--accent-bgcolor-40),
+      var(--accent-bgcolor-40)
+    ),
+    url(../images/hero-background.jpg);
+}
+
+.hero .container {
   padding: 200px 0;
 }
 
@@ -294,30 +323,30 @@ section Hero */
 
 /* style for footer */
 
-.footer-box .container {
+.footer .container {
   padding-bottom: 60px;
   padding-top: 60px;
 }
 
-.footer-box .logo {
+.footer .logo {
   margin-bottom: 20px;
 }
 
-.footer-box .address-info {
+.footer .address-info {
   display: block;
   margin-bottom: 9px;
   color: var(--white-color);
 }
 
-.footer-box .footer-info {
+.footer .footer-info {
   display: inline-block;
 }
 
-.footer-box .listitem {
+.footer .listitem {
   display: block;
 }
 
-.footer-box .listinfo .listitem:not(:last-child) {
+.footer .listinfo .listitem:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -326,7 +355,7 @@ section Hero */
   color: var(--footter-acolor);
 }
 
-.footer-box {
+.footer {
   min-width: var(--width-container);
   background-color: var(--accent-bgcolor);
 }
