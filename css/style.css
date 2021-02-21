@@ -451,6 +451,7 @@ address {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
   padding-bottom: 60px;
   padding-top: 60px;
 }
@@ -493,7 +494,7 @@ address {
 .footer .container .footer-block-wrap .title {
   display: inline-flex;
   margin-bottom: 20px;
-  padding-top: 12px;
+  /* padding-top: 12px; */
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--white-color);
